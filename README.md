@@ -1,8 +1,7 @@
 # PisaCard Node.js版 v2.x
 
-Powerd By 广树 [维基萌](https://www.wikimoe.com/)
-
 使用NodeJs(搭配express-generator+mongoose)+MongoDB+Vue(搭配Vue-cli+Element-ui)
+基于广树 [维基萌卡牌改造](https://www.wikimoe.com/)
 
 ### 介绍
 
