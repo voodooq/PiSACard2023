@@ -13,7 +13,8 @@
         </div>
         <div class="wm_card_menu_text">首页</div>
       </div>
-      <div class="wm_card_menu_box"
+      <!--
+        <div class="wm_card_menu_box"
            @click="goCouse()"
            @mouseenter="$wikimoecard.l2dMassage('查看游戏教程，推荐新手玩家必读！')"
            @mouseleave="$wikimoecard.l2dMassageClose">
@@ -24,6 +25,7 @@
         </div>
         <div class="wm_card_menu_text">教程</div>
       </div>
+      -->
       <router-link tag="div"
                    to="/reg"
                    class="wm_card_menu_box"

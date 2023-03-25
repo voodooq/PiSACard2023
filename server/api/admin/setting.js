@@ -266,15 +266,15 @@ module.exports = async function (req, res, next) {
             creatCardExplainUrl: config_.creatCardExplainUrl || '',//制卡说明图片URL地址
             QQunURL: config_.QQunURL || '',//加群链接
             courseURL: config_.courseURL || '',//教程链接
-            browserTitle: config_.browserTitle || '维基萌抽卡',//浏览器标签标题
-            siteTitle: config_.siteTitle || '维基萌抽卡',//网站标题
+            browserTitle: config_.browserTitle || 'PisaCard卡牌游戏',//浏览器标签标题
+            siteTitle: config_.siteTitle || 'PisaCard卡牌游戏',//网站标题
         };
         adminUtils.writeGlobalOpt(opt);
         fs.writeFileSync("templete/footer.html", config_.footer || "", 'utf8');
         const $ = cheerio.load(fs.readFileSync('public/index.html', 'utf8'), { decodeEntities: false });
         const footerHTML = fs.readFileSync('templete/footer.html', 'utf8');
         $('#wm_index_footer').html(footerHTML);
-        $('title').text(global.myAppConfig.browserTitle || "维基萌抽卡");
+        $('title').text(global.myAppConfig.browserTitle || "PisaCard卡牌游戏");
         fs.writeFileSync("public/index.html", $.html());
         fs.writeFileSync('./data/hiddenWords.txt', config_.hiddenWords || "", 'utf8');
         res.send({
